@@ -56,12 +56,12 @@ class Main extends PluginBase implements Listener {
     }
     public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool {
         switch($cmd->getName()){
-			case "spawn":
-				if($sender instanceof Player){
-					$sender->sendMessage("§aVous avez été téléporté au spawn!");
-					$sender->teleport($this->getServer()->getLevelByName("world")->getSpawnLocation());
-				}
-			break;
+	    case "spawn":
+		if($sender instanceof Player){
+		    $sender->sendMessage("§aVous avez été téléporté au spawn!");
+		    $sender->teleport($this->getServer()->getLevelByName("world")->getSpawnLocation());
+		}
+	    break;
         }
         switch($cmd->getName()){
             case "setspawn":
